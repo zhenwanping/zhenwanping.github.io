@@ -48,11 +48,16 @@
         <div class="timer">
             <b id="d"></b> Days <b id="h"></b> Hours <b id="m"></b> Minutes <b id="s"></b> Seconds
         </div>
+        
+        <h2>跟官官，在一起已经</h2>
+        <div class="timer">
+            <b id="d2"></b> Days <b id="h2"></b> Hours <b id="m2"></b> Minutes <b id="s2"></b> Seconds
+        </div>
     </div>
 
     <script>
         function timer() {
-            var start = new Date(2018, 13, 20);
+            var start = new Date(2018, 11, 20);
             var t = new Date() - start;
             var h = ~~(t / 1000 / 60 / 60 % 24);
             if (h < 10) {
@@ -72,8 +77,31 @@
             document.getElementById('m').innerHTML = m;
             document.getElementById('s').innerHTML = s;
         }
+        function timer2() {
+            var start = new Date(2019, 2, 24);
+            var t = new Date() - start;
+            var h = ~~(t / 1000 / 60 / 60 % 24);
+            if (h < 10) {
+                h = "0" + h;
+            }
+            var m = ~~(t / 1000 / 60 % 60);
+            if (m < 10) {
+                m = "0" + m;
+            }
+
+            var s = ~~(t / 1000 % 60);
+            if (s < 10) {
+                s = "0" + s;
+            }
+            document.getElementById('d2').innerHTML = ~~(t / 1000 / 60 / 60 / 24);
+            document.getElementById('h2').innerHTML = h;
+            document.getElementById('m2').innerHTML = m;
+            document.getElementById('s2').innerHTML = s;
+        }
         timer();
         setInterval(timer, 1000);
+        timer2();
+        setInterval(timer2, 1000);
     </script>
 </body>
 
