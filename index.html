@@ -57,7 +57,7 @@
 
     <script>
         function timer() {
-            var start = Date(2018, 11, 20, 22, 12, 30, 21);
+            var start = new Date(2018, 11, 20, 22, 12, 30, 0);
             var t = new Date() - start;
             var h = ~~(t / 1000 / 60 / 60 % 24);
             if (h < 10) {
@@ -78,7 +78,7 @@
             document.getElementById('s').innerHTML = s;
         }
         function timer2() {
-            var start = new Date(2019, 2, 24, 21, 22, 21, 12);
+            var start = new Date(2019, 2, 24, 21, 10, 30, 0);
             var t = new Date() - start;
             var h = ~~(t / 1000 / 60 / 60 % 24);
             if (h < 10) {
